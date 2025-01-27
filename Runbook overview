@@ -117,3 +117,23 @@ Suppose you have a large document and want to perform sentiment analysis. Instea
 Chunking is a versatile technique that enhances the handling and processing of large datasets in various machine learning tasks.
 
 Would you like to explore a specific example or application in more detail? 😊
+
+
+
+
+########
+
+const postmanToOpenApi = require('postman-to-openapi');
+const postmanCollection = './path/to/your/collection.json';
+const outputFile = './output/openapi.yml';
+
+async function convertCollection() {
+  try {
+    const result = await postmanToOpenApi(postmanCollection, outputFile, { defaultTag: 'General' });
+    console.log('Conversion successful!');
+  } catch (error) {
+    console.error('Error during conversion:', error);
+  }
+}
+
+convertCollection();
